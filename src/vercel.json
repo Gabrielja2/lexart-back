@@ -1,0 +1,22 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "server.js",
+            "use": "@now/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "server.js"
+        }
+    ],
+    "env": {
+        "NODE_ENV": "development",
+        "DATABASE_URL": "postgres://default:vSutayBwj0o2@ep-super-bird-a48udion.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require",
+        "PORT": "3001",
+        "JWT_EXPIRE_IN_SECONDS": "86400",
+        "JWT_SECRET": "jwt_secret"
+    }
+}
